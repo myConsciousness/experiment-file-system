@@ -8,8 +8,7 @@ import 'package:experiment_file_system/src/repository/const/column/folder_item_c
 class FolderItem {
   int id = -1;
   int folderId;
-  String wordId;
-  int sentenceGroupId;
+  int itemId;
   String remarks;
   String userId;
   int sortOrder;
@@ -24,8 +23,7 @@ class FolderItem {
   FolderItem.empty()
       : _empty = true,
         folderId = -1,
-        wordId = '',
-        sentenceGroupId = -1,
+        itemId = -1,
         remarks = '',
         userId = '',
         sortOrder = -1,
@@ -37,8 +35,7 @@ class FolderItem {
   FolderItem.from({
     this.id = -1,
     required this.folderId,
-    required this.wordId,
-    required this.sentenceGroupId,
+    required this.itemId,
     required this.remarks,
     required this.userId,
     this.sortOrder = -1,
@@ -51,8 +48,7 @@ class FolderItem {
   factory FolderItem.fromMap(Map<String, dynamic> map) => FolderItem.from(
         id: map[FolderItemColumn.id],
         folderId: map[FolderItemColumn.folderId],
-        wordId: map[FolderItemColumn.wordId],
-        sentenceGroupId: map[FolderItemColumn.sentenceGroupId],
+        itemId: map[FolderItemColumn.itemId],
         remarks: map[FolderItemColumn.remarks],
         userId: map[FolderItemColumn.userId],
         sortOrder: map[FolderItemColumn.sortOrder],
@@ -69,8 +65,7 @@ class FolderItem {
   Map<String, dynamic> toMap() {
     final map = <String, dynamic>{};
     map[FolderItemColumn.folderId] = folderId;
-    map[FolderItemColumn.wordId] = wordId;
-    map[FolderItemColumn.sentenceGroupId] = sentenceGroupId;
+    map[FolderItemColumn.itemId] = itemId;
     map[FolderItemColumn.remarks] = remarks;
     map[FolderItemColumn.userId] = userId;
     map[FolderItemColumn.sortOrder] = sortOrder;
