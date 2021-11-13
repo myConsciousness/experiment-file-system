@@ -8,7 +8,7 @@ import 'package:experiment_file_system/src/repository/const/column/folder_item_c
 class FolderItem {
   int id = -1;
   int folderId;
-  int itemId;
+  String itemId;
   String remarks;
   String userId;
   int sortOrder;
@@ -23,7 +23,7 @@ class FolderItem {
   FolderItem.empty()
       : _empty = true,
         folderId = -1,
-        itemId = -1,
+        itemId = '',
         remarks = '',
         userId = '',
         sortOrder = -1,

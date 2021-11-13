@@ -55,18 +55,14 @@ Future<T?> showEditFolderDialog<T>({
                     TextField(
                       controller: _folderName,
                       maxLength: 50,
-                      onChanged: (text) {
+                      onSubmitted: (text) {
                         _folderName.text = text;
                       },
                     ),
-                    const SizedBox(
-                      height: 10,
-                    ),
                     TextField(
                       controller: _remarks,
-                      maxLines: 5,
                       maxLength: 200,
-                      onChanged: (text) {
+                      onSubmitted: (text) {
                         _remarks.text = text;
                       },
                     ),
