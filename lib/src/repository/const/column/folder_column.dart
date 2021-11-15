@@ -5,7 +5,7 @@
 class FolderColumn {
   static const id = 'ID';
   static const parentFolderId = 'PARENT_FOLDER_ID';
-  static const folderType = 'FOLDER_TYPE';
+  static const type = 'TYPE';
   static const name = 'NAME';
   static const remarks = 'REMARKS';
   static const sortOrder = 'SORT_ORDER';

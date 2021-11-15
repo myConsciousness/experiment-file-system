@@ -49,7 +49,7 @@ class Folder {
   factory Folder.fromMap(Map<String, dynamic> map) => Folder.from(
         id: map[FolderColumn.id],
         parentFolderId: map[FolderColumn.parentFolderId],
-        folderType: FolderTypeExt.toEnum(code: map[FolderColumn.folderType]),
+        folderType: FolderTypeExt.toEnum(code: map[FolderColumn.type]),
         name: map[FolderColumn.name],
         remarks: map[FolderColumn.remarks],
         sortOrder: map[FolderColumn.sortOrder],
@@ -66,7 +66,7 @@ class Folder {
   Map<String, dynamic> toMap() {
     final map = <String, dynamic>{};
     map[FolderColumn.parentFolderId] = parentFolderId;
-    map[FolderColumn.folderType] = folderType.code;
+    map[FolderColumn.type] = folderType.code;
     map[FolderColumn.name] = name;
     map[FolderColumn.remarks] = remarks;
     map[FolderColumn.sortOrder] = sortOrder;
